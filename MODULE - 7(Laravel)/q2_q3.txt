@@ -1,0 +1,11 @@
+• How to pass Multiple Variable in route?
+• How to pass variable which can be null in Route?
+
+
+Route::get('/user/{user_id?}/{name}', function(string $user_id = null, string $name){
+    if ($user_id){
+        return "UserID : " .$user_id . ", Name: " . $name;
+    } else {
+        return "UserID is not provided, Name: " . $name;
+    }
+})->where('user_id', '.*')->whereAlpha('name');

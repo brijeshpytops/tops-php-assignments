@@ -1,0 +1,68 @@
+<!-- In <table> Design Change The Color Of Even <tr> Elements To
+“green”And Change The Color Of Odd <tr> Elements To “blue” Color? Give An Example Code? -->
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Row Color Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: black;
+            color: whitesmoke;
+        }
+        tr:nth-child(even) {
+            background-color: green;
+        }
+        tr:nth-child(odd) {
+            background-color: blue;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+                <td>Row 1 Data 3</td>
+            </tr>
+            <tr>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
+                <td>Row 2 Data 3</td>
+            </tr>
+            <tr>
+                <td>Row 3 Data 1</td>
+                <td>Row 3 Data 2</td>
+                <td>Row 3 Data 3</td>
+            </tr>
+            <tr>
+                <td>Row 4 Data 1</td>
+                <td>Row 4 Data 2</td>
+                <td>Row 4 Data 3</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    </body>
+    </html>
+    

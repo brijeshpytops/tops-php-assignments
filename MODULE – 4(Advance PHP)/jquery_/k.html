@@ -1,0 +1,32 @@
+<!-- Create custom dynamic function for require field validator. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function validate_required_field(fieldId) {
+            var field = document.getElementById(fieldId);
+            if (!field) {
+                console.error("Field with ID " + fieldId + " not found.");
+                return false;
+            }
+
+            var value = field.value.trim();
+            if (value === "") {
+                console.error("Field with ID " + fieldId + " is required.");
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>

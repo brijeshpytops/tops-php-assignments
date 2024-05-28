@@ -1,0 +1,37 @@
+<!-- How We Can Implement Animation Effects In Jquery? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Animation Example</title>
+<style>
+    #box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Select the element to animate
+        var box = $('#box');
+
+        box.click(function() {
+            box.animate({ 
+                opacity: 0.5, 
+                left: '+=50', 
+                height: 'toggle' 
+            }, 1000, 'swing', function() {
+                console.log('Animation complete');
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

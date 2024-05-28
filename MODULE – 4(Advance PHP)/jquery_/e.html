@@ -1,0 +1,44 @@
+<!-- What is the difference between prop and attr? -->
+
+Both prop() and attr() are methods used to get or set properties or attributes of DOM elements, but they serve different purposes and behave differently in certain situations:
+
+prop():
+
+The prop() method is primarily used to get or set properties of DOM elements, such as checked, disabled, selected, etc.
+
+It is recommended for changing properties that represent the current state of an element, such as checked or selected status of checkboxes or radio buttons.
+
+It returns the current value of the specified property for the first element in the set of matched elements, or sets one or more properties for every matched element.
+
+It works well with boolean properties, as it returns a boolean value representing the current state of the property.
+
+Example : 
+
+<script>
+    // Get the checked status of a checkbox
+    var isChecked = $('#checkbox').prop('checked');
+
+    // Set the checked status of a checkbox
+    $('#checkbox').prop('checked', true);
+
+</script>
+
+attr():
+
+The attr() method is primarily used to get or set attributes of DOM elements, such as src, href, title, etc.
+
+It is recommended for changing attributes that represent static values, such as URLs or titles.
+
+It returns the value of the attribute for the first element in the set of matched elements, or sets one or more attributes for every matched element.
+
+It works well with attributes that have string values.
+
+Example :
+<script>
+    // Get the href attribute of a link
+    var hrefValue = $('a').attr('href');
+
+    // Set the href attribute of a link
+    $('a').attr('href', 'https://example.com');
+
+</script>

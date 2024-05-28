@@ -1,0 +1,9 @@
+ How to remove route caching?
+
+ Using Artisan Command:
+
+ >>> php artisan route:clear
+
+ Manual Removal:
+
+ bootstrap/cache/routes.php. Simply delete this file

@@ -1,0 +1,34 @@
+<!-- Document Load Vs Window. Load() jQuery -->
+
+$(document).ready():
+
+- This method is used to execute code once the DOM (Document Object Model) is fully loaded.
+
+- It ensures that the code inside the function passed to $(document).ready() is executed as soon as the DOM hierarchy is constructed and ready for manipulation.
+
+- It does not wait for external resources like images to be fully loaded; it only waits for the HTML structure to be parsed.
+
+Example :
+ <script>
+    $(document).ready(function() {
+    // Code to be executed when the DOM is ready
+    });
+ </script>
+
+
+$(window).load():
+
+- This method is used to execute code once the entire window, including all assets like images and iframes, has finished loading.
+
+- It waits for all resources referenced by the HTML document to be loaded, including images, CSS, and scripts.
+
+- It can be useful when you need to manipulate elements or perform actions that depend on the dimensions of images or other assets.
+
+Example :
+
+<script>
+    $(window).load(function() {
+        // Code to be executed when the entire window is fully loaded
+    });
+
+</script>

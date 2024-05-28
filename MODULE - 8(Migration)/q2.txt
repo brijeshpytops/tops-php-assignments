@@ -1,0 +1,12 @@
+Call MySQLi Store Procedure from Laravel.
+
+in controller :
+
+use Illuminate\Support\Facades\DB;
+
+$result = DB::select('CALL my_procedure(?, ?)', array($param1, $param2));
+
+
+foreach ($result as $row) {
+    $value = $row->column_name;
+}
