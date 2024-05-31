@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImageController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +14,8 @@ use App\Http\Controllers\ImageController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/admin', [ImageController::class, 'index'])->name('admin');
-Route::post('/admin/upload', [ImageController::class, 'upload'])->name('admin.upload');
-Route::get('/gallery', [ImageController::class, 'gallery'])->name('gallery');
+Route::get('/users', [UserController::class, 'index']);
+
+
+
